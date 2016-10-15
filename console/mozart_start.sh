@@ -10,7 +10,7 @@ cp2=`ls $lib2/*.jar | xargs | sed "s/ /:/g"`
 cp=$base/conf:$cp1:$cp2
 echo $cp
 
-if [ -z "$1"] 
+if [ -z "$1" ] 
 then 
 cn='fwj.classical.mozart.MozartLaunch'
 else 
