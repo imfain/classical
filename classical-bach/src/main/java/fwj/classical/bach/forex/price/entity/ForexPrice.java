@@ -10,10 +10,12 @@ import javax.persistence.UniqueConstraint;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+import fwj.classical.bach.common.vo.Price;
+
 @Entity
 @Table(name = "forex_price", uniqueConstraints = {
 		@UniqueConstraint(name = "forex_price_uni", columnNames = { "code", "dt" }) })
-public class ForexPrice extends AbstractPersistable<Integer> {
+public class ForexPrice extends AbstractPersistable<Integer> implements Price {
 
 	private static final long serialVersionUID = -6510605608176847660L;
 
@@ -81,5 +83,10 @@ public class ForexPrice extends AbstractPersistable<Integer> {
 
 	public void setClose(BigDecimal close) {
 		this.close = close;
+	}
+
+	@Override
+	public BigDecimal getP() {
+		return close;
 	}
 }
