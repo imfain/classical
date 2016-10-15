@@ -15,9 +15,9 @@ import org.springframework.stereotype.Component;
 
 import com.google.common.io.Resources;
 
-import fwj.classical.mozart.forex.common.repos.ForexPairRepos;
-import fwj.classical.mozart.forex.price.entity.ForexPrice;
-import fwj.classical.mozart.forex.price.repos.ForexPriceRepos;
+import fwj.classical.bach.forex.common.repos.ForexPairRepos;
+import fwj.classical.bach.forex.price.entity.ForexPrice;
+import fwj.classical.bach.forex.price.repos.ForexPriceRepos;
 
 @Component
 public class ForexPriceImporter {

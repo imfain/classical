@@ -30,7 +30,7 @@
 		<appender-ref ref="sqlFile"/>
     </logger>
 	
-	<logger name="fwj.classical.mozart" level="INFO" additivity="true">  
+	<logger name="fwj.classical" level="INFO" additivity="true">  
 		<appender-ref ref="defaultFile"/>
     </logger>   
 

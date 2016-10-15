@@ -1,4 +1,4 @@
-package fwj.classical.mozart.manual.launch;
+package fwj.classical.mozart;
 
 import org.apache.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

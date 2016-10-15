@@ -5,9 +5,9 @@ import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import fwj.classical.mozart.forex.common.entity.ForexPair;
-import fwj.classical.mozart.forex.common.repos.ForexPairRepos;
-import fwj.classical.mozart.manual.launch.AbstractBaseLaunch;
+import fwj.classical.bach.forex.common.entity.ForexPair;
+import fwj.classical.bach.forex.common.repos.ForexPairRepos;
+import fwj.classical.mozart.AbstractBaseLaunch;
 
 /**
  * 
@@ -16,7 +16,7 @@ import fwj.classical.mozart.manual.launch.AbstractBaseLaunch;
  * 
  */
 @Component
-public class ForexPairImport extends AbstractBaseLaunch {
+public class ForexPairInit extends AbstractBaseLaunch {
 
 	@Autowired
 	private ForexPairRepos forexPairRepos;
@@ -55,7 +55,7 @@ public class ForexPairImport extends AbstractBaseLaunch {
 	}
 
 	public static void main(String[] args) {
-		launch(ForexPairImport.class);
+		launch(ForexPairInit.class);
 	}
 
 }

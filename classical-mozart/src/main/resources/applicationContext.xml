@@ -17,9 +17,9 @@
         http://www.springframework.org/schema/cache
         http://www.springframework.org/schema/cache/spring-cache.xsd">
 
-	<context:component-scan base-package="fwj.classical.mozart.forex" />
+	<context:component-scan base-package="fwj.classical" />
 
-	<jpa:repositories base-package="fwj.classical.mozart.forex"
+	<jpa:repositories base-package="fwj.classical"
 		entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager" />
 
@@ -31,7 +31,7 @@
 		</property>
 		<property name="packagesToScan">
 			<array>
-				<value>fwj.classical.mozart.forex</value>
+				<value>fwj.classical</value>
 			</array>
 		</property>
 		<property name="jpaProperties">
