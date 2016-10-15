@@ -2,8 +2,7 @@
 /.settings/
 .project
 .classpath
-/log/
+/mozart-log/
 /src/main/resources/jdbc.properties
-/target/
 /target/
 /bin/
