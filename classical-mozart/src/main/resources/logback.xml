@@ -6,19 +6,9 @@
 		</layout>
 	</appender>
 	
-	<appender name="taskFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
-      		<fileNamePattern>log/task.%d{yyyy-MM-dd}.log</fileNamePattern>   
-      		<maxHistory>30</maxHistory>    
-      	</rollingPolicy>
-      	<layout class="ch.qos.logback.classic.PatternLayout">
-			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>
-		</layout>
-	</appender>
-	
 	<appender name="sqlFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
-      		<fileNamePattern>log/sql.%d{yyyy-MM-dd}.log</fileNamePattern>   
+      		<fileNamePattern>mozart-log/sql.%d{yyyy-MM-dd}.log</fileNamePattern>   
       		<maxHistory>30</maxHistory>    
       	</rollingPolicy>
       	<layout class="ch.qos.logback.classic.PatternLayout">
@@ -28,23 +18,19 @@
 	
 	<appender name="defaultFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
-      		<fileNamePattern>log/default.%d{yyyy-MM-dd}.log</fileNamePattern>   
+      		<fileNamePattern>mozart-log/default.%d{yyyy-MM-dd}.log</fileNamePattern>   
       		<maxHistory>30</maxHistory>    
       	</rollingPolicy>
       	<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>
 		</layout>
 	</appender>  
-	
-	<logger name="fwj.futures.resource.task" level="INFO" additivity="false">  
-		<appender-ref ref="taskFile"/>
-    </logger>
-    
-    <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">  
+	   
+    <logger name="org.hibernate.SQL" level="INFO" additivity="false">  
 		<appender-ref ref="sqlFile"/>
     </logger>
 	
-	<logger name="fwj.futures" level="INFO" additivity="false">  
+	<logger name="fwj.classical.mozart" level="INFO" additivity="true">  
 		<appender-ref ref="defaultFile"/>
     </logger>   
 

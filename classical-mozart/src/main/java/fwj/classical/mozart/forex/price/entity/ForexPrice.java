@@ -12,7 +12,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
 @Table(name = "forex_price", uniqueConstraints = {
-		@UniqueConstraint(name = "forex_price_uni", columnNames = { "dt", "code" }) })
+		@UniqueConstraint(name = "forex_price_uni", columnNames = { "code", "dt" }) })
 public class ForexPrice extends AbstractPersistable<Integer> {
 
 	private static final long serialVersionUID = -6510605608176847660L;

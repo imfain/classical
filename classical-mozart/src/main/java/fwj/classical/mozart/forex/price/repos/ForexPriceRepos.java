@@ -12,5 +12,7 @@ import fwj.classical.mozart.forex.price.entity.ForexPrice;
 public interface ForexPriceRepos extends JpaRepository<ForexPrice, Integer> {
 
 	List<ForexPrice> findByCodeAndDtBetweenOrderByDtAsc(String code, Date startDt, Date endDt);
+	
+	ForexPrice findTopByCodeOrderByDtDesc(String code);
 
 }
