@@ -2,6 +2,9 @@ package fwj.classical.mozart;
 
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MozartLaunch  extends AbstractBaseLaunch {
 
 	@Override

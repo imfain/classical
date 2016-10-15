@@ -1,4 +1,4 @@
-package fwj.classical.mozart.forex;
+package fwj.classical.mozart;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
