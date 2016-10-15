@@ -12,7 +12,8 @@ public class MozartLaunch  extends AbstractBaseLaunch {
 		log.info("started");
 		while(true) {
 			try {
-				TimeUnit.DAYS.sleep(1);
+				TimeUnit.HOURS.sleep(1);
+				log.info("alive");
 			} catch (InterruptedException e) {
 				return;
 			}
