@@ -1,0 +1,8 @@
+/target/
+/.settings/
+.project
+.classpath
+/liszt-log/
+/src/main/resources/jdbc.properties
+/target/
+/bin/

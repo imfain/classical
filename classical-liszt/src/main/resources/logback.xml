@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	<appender name="sqlFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
+      		<fileNamePattern>liszt-log/sql.%d{yyyy-MM-dd}.log</fileNamePattern>   
+      		<maxHistory>30</maxHistory>    
+      	</rollingPolicy>
+      	<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	<appender name="defaultFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">   
+      		<fileNamePattern>liszt-log/default.%d{yyyy-MM-dd}.log</fileNamePattern>   
+      		<maxHistory>30</maxHistory>    
+      	</rollingPolicy>
+      	<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} - %msg%n</pattern>
+		</layout>
+	</appender>  
+	   
+    <logger name="org.hibernate.SQL" level="INFO" additivity="false">  
+		<appender-ref ref="sqlFile"/>
+    </logger>
+	
+	<logger name="fwj.classical" level="INFO" additivity="true">  
+		<appender-ref ref="defaultFile"/>
+    </logger>   
+
+	<root level="INFO">
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>  

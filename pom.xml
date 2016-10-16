@@ -7,5 +7,6 @@
   <modules>
   	<module>classical-bach</module>
   	<module>classical-mozart</module>
+  	<module>classical-liszt</module>
   </modules>
 </project>
